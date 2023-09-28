@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <!-- <p>Search by City Name:</p> -->
+    <form id="cityForm">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button type="button" id="getWeatherByCityButton">Get Weather</button>
+    </form>
+
+    <!-- <p>Search by ZIP Code:</p> -->
+    <form id="zipForm">
+        <input type="text" id="zipInput" placeholder="Enter ZIP code">
+        <button type="button" id="getWeatherByZipButton">Get Weather</button>
+    </form>
+
+    <!-- Add a button for geolocation -->
+<button id="getWeatherByLocation">Get Weather by Location</button>
+
+
+    <div id="weatherResult">
+        <p id="errorMessage"></p>
+        <button id="retryButton" style="display: none;">Retry</button>
+
+        <div id="currentWeather" style="display: none;">
+            <h2>Current Weather</h2>
+            <div id="temperature"></div>
+            <div id="cityName"></div>
+            <div id="humidity"></div>
+            <div id="windSpeed"></div>
+            <div id="weatherDescription"></div>
+            
+            <!-- Unit selection dropdown -->
+            <label for="unitSelect">Select Unit:</label>
+            <select id="unitSelect">
+                <option value="metric">Celsius</option>
+                <option value="imperial">Fahrenheit</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
